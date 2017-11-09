@@ -1,0 +1,43 @@
+.container {
+    display: inline-flex;
+    background-color: green;
+    /*height: 100%;
+    width: 100%;*/
+    margin: 10px;
+    border-style:dotted;
+  }
+  .shoppingitem {
+    width: 70%;
+    margin: 10px;
+    background-color: yellow;
+    border-style: double;
+  }
+  .shoppingcart {
+    width: 30%;
+    margin: 10px;
+    background-color: red;
+    border-style: double;
+  }
+  .itemdiv {
+    float: left;
+    width: 27%;
+    margin: 10px;
+    padding: 5px;
+    border-style: double;
+    text-align: center;
+  }
+  .imgdiv {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 1px solid;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  p {
+    text-align: left;
+
+  }
+  
