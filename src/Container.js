@@ -13,12 +13,9 @@ class Container extends React.Component {
     }
 
     getAddItem(value) {
-      //this.state.additem.push(value)
       const additem = this.state.addToCart;
       additem.push(value)
       this.setState({addToCart: additem})
-      //console.log(this.state.additem)
-      console.log(addToCart)
     }
 
 

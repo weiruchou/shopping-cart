@@ -5,8 +5,15 @@ import '../css/style.css';
 class ShoppingCart extends React.Component {
     constructor(props) {
         super(props);
-        
+        this.state= ({
+          cartItem: this.props.cart,
+        })
     }
+
+    deleteCartItem() {
+
+    }
+
     render() {
       return (
         <div className="shoppingcart">
@@ -20,7 +27,7 @@ class ShoppingCart extends React.Component {
                   <p>廠牌：{value.c_make}</p>
                   <p>型號：{value.c_name}</p>
                   <p>年份：{value.c_desc}</p>
-                  <button>刪除</button>
+                  <button onClick={this.deleteCartItem.bind(this,index)}>刪除</button>
                 </div>
             </div>)
           }
