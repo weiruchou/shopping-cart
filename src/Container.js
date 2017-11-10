@@ -8,20 +8,26 @@ class Container extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        additem: [],
+        addToCart: [],
       }
     }
 
     getAddItem(value) {
-      this.state.additem.push(value)
-      console.log(this.state.additem)
+      //this.state.additem.push(value)
+      const additem = this.state.addToCart;
+      additem.push(value)
+      this.setState({addToCart: additem})
+      //console.log(this.state.additem)
+      console.log(addToCart)
     }
 
+
     render() {
+        
         return (
           <div className="container">
             <ShoppingItem getAddItem= {this.getAddItem.bind(this)}/>
-            <ShoppingCart />
+            <ShoppingCart cart= {this.state.addToCart}/>
           </div>
         )
       }
