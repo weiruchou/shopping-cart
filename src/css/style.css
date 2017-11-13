@@ -48,4 +48,6 @@
     border-style: double;
     text-align: center;
   }
-  
+  button {
+    margin: 10px;
+  }
