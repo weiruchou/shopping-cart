@@ -21,18 +21,23 @@ class Container extends React.Component {
       //判斷購物車內是否有商品
       if(this.state.addToCart.length) {
         //判斷要加入的商品id是否有存在於購物車內
-        additem.map((text,index) => {if(text.c_id === value.c_id){
-          text.amount+=1;
-          exist = false;
-        }})
+        additem.map((text,index) => 
+          {if(text.c_id === value.c_id){
+            text.amount+=1;
+            exist = false;
+          }})
       }
 
       if(exist) {
         value.amount=1;
         additem.push(value)
       }
-      console.log(additem)
       this.setState({addToCart: additem})
+      
+    }
+
+    setCount(value) {
+      this.setState({addToCart: value})
     }
 
 
@@ -41,7 +46,7 @@ class Container extends React.Component {
         return (
           <div className="container">
             <ShoppingItem getAddItem= {this.getAddItem.bind(this)}/>
-            <ShoppingCart cart= {this.state.addToCart}/>
+            <ShoppingCart cart= {this.state.addToCart} setCount= {this.setCount.bind(this)}/>
           </div>
         )
       }
